@@ -666,7 +666,7 @@ payload:
   - DOMAIN-SUFFIX,womai.com
   - DOMAIN-SUFFIX,wscdns.com
   - DOMAIN-SUFFIX,xdrig.com
-  - DOMAIN-SUFFIX,xhscdn.com
+  # - DOMAIN-SUFFIX,xhscdn.com
   - DOMAIN-SUFFIX,xiachufang.com
   # - DOMAIN-SUFFIX,xiaohongshu.com
   - DOMAIN-SUFFIX,xiaojukeji.com
