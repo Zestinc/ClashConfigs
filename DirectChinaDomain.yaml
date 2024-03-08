@@ -1,3 +1,4 @@
+# 在海外能直接连通基本不需要国内IP的服务
 payload:
   # Bilibili
   - DOMAIN-SUFFIX,acg.tv
