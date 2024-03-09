@@ -32,7 +32,7 @@ proxy-providers:
       interval: 3600
 proxy-groups:
     # Functions
-    - { name: '🔰 手动选择', type: select, proxies: ['🇨🇳 China'] } 
+    # - { name: '🔰 手动选择', type: select, proxies: ['🇨🇳 China'] } 
     # Rigions
     - {name: '🇨🇳 China', type: url-test, use: [EdNovas], filter: "有日志记录|🇨🇳", icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/China.png, interval: 10, lazy: true, tolerance: 50, include-all: true, url: http://connectivitycheck.platform.hicloud.com/generate_204}
     - {name: '🇺🇸 United States', type: url-test, use: [EdNovas], filter: "美|🇺🇲|US|(?i)States|America", icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png, interval: 120, lazy: true, tolerance: 50, include-all: true, url: http://www.gstatic.com/generate_204 }
@@ -60,6 +60,6 @@ rules:
     - 'DOMAIN,user.36d.dev,DIRECT'
     - 'RULE-SET,DirectChinaDomain,DIRECT'
     - 'RULE-SET,USOnlyDomain,🇺🇸 United States'
-    - 'RULE-SET,SteamCN,🔰 手动选择'
-    - 'RULE-SET,ChinaDomain,🔰 手动选择'
-    - 'RULE-SET,ChinaIp,🔰 手动选择'
+    - 'RULE-SET,SteamCN,🇨🇳 China'
+    - 'RULE-SET,ChinaDomain,🇨🇳 China'
+    - 'RULE-SET,ChinaIp,🇨🇳 China'
