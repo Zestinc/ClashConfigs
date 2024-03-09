@@ -14,3 +14,8 @@ payload:
   - DOMAIN-SUFFIX,x6img.com
   - DOMAIN-SUFFIX,gifyu.com
   - DOMAIN-SUFFIX,uploadhouse.com
+  - DOMAIN-SUFFIX,redircdn.com
+  - DOMAIN-SUFFIX,thumbsnap.com
+  - DOMAIN-SUFFIX,postimg.cc
+  - DOMAIN-SUFFIX,imgbox.com
+  
