@@ -1,4 +1,5 @@
 # 在海外能直接连通基本不需要国内IP的服务
+# 回国Clash配置使用。放在ChinaIP等规则的上面，避免被覆盖
 payload:
   # Bilibili
   - DOMAIN-SUFFIX,acg.tv

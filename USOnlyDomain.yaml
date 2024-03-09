@@ -1,4 +1,4 @@
-# Personal use US only domain
+# 强制走节点的域名
 payload:
   - DOMAIN-SUFFIX,pemby.ednovas.org
   - DOMAIN-SUFFIX,91porn.com
