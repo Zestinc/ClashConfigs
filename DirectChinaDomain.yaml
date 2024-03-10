@@ -24,7 +24,7 @@ payload:
   - DOMAIN-SUFFIX,xhscdn.com
   - DOMAIN-SUFFIX,xiaohongshu.com
 
-    # Tencent
+  # Tencent
   - DOMAIN-SUFFIX,foxmail.com
   - DOMAIN-SUFFIX,gtimg.com
   - DOMAIN-SUFFIX,idqqimg.com
