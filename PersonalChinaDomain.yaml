@@ -1,6 +1,20 @@
 # IPS: Sonic
 # 自用需要使用国内IP的域名
-payload:
+payload: 
+  # Baidu 能连但是速度还不如代理
+  - DOMAIN-SUFFIX,baidu.com
+  - DOMAIN-SUFFIX,baidubcr.com
+  - DOMAIN-SUFFIX,baidupcs.com
+  - DOMAIN-SUFFIX,baidustatic.com
+  - DOMAIN-SUFFIX,bcebos.com
+  - DOMAIN-SUFFIX,bdimg.com
+  - DOMAIN-SUFFIX,bdstatic.com
+  - DOMAIN-SUFFIX,bdurl.net
+  - DOMAIN-SUFFIX,hao123.com
+  - DOMAIN-SUFFIX,hao123img.com
+  - DOMAIN-SUFFIX,jomodns.com
+  - DOMAIN-SUFFIX,yunjiasu-cdn.net
+
   # NetEase
   - DOMAIN-SUFFIX,126.com
   - DOMAIN-SUFFIX,126.net
