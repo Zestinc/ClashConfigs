@@ -35,21 +35,15 @@ proxy-groups:
     # - { name: '🔰 手动选择', type: select, proxies: ['🇨🇳 China'] } 
     # Rigions
     - {name: '🇨🇳 China', type: url-test, use: [EdNovas], filter: "🇨🇳|日志记录", icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/China.png, interval: 30, lazy: true, tolerance: 200, include-all: true, url: http://connectivitycheck.platform.hicloud.com/generate_204}
-    - {name: '🇺🇸 United States', type: url-test, use: [EdNovas], filter: "🇺🇲|US|(?i)States|America", icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png, interval: 30, lazy: true, tolerance: 100, include-all: true, url: http://www.gstatic.com/generate_204 }
-
-    - { name: '🍎 Apple', type: select, proxies: [DIRECT]}
-    - { name: 'Ⓜ Microsoft', type: select, proxies: [DIRECT]}
+    - {name: '🇺🇸 United States', type: url-test, use: [EdNovas], filter: "美|🇺🇲|US|(?i)States|America", icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png, interval: 30, lazy: true, tolerance: 100, include-all: true, url: http://www.gstatic.com/generate_204 }
 
 rule-providers:
-    SteamCN: { type: http, behavior: classical, path: ./providers/rule/Games/SteamCN.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/Ruleset/SteamCN.yaml, interval: 21600 }
-    ChinaDomain: { type: http, behavior: classical, path: ./providers/rule/ChinaDomain.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/ChinaDomain.yaml, interval: 21600 }
+    # SteamCN: { type: http, behavior: classical, path: ./providers/rule/Games/SteamCN.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/Ruleset/SteamCN.yaml, interval: 21600 }
+    # ChinaDomain: { type: http, behavior: classical, path: ./providers/rule/ChinaDomain.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/ChinaDomain.yaml, interval: 21600 }
     DirectChinaDomain: { type: http, behavior: classical, path: ./providers/rule/DirectChinaDomain.yaml, url: https://raw.githubusercontent.com/Zestinc/ClashConfigs/main/DirectChinaDomain.yaml, interval: 60 }
     USOnlyDomain: { type: http, behavior: classical, path: ./providers/rule/USOnlyDomain.yaml, url: https://raw.githubusercontent.com/Zestinc/ClashConfigs/main/USOnlyDomain.yaml, interval: 60 }
-    ChinaIp: { type: http, behavior: ipcidr, path: ./providers/rule/ChinaIp.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/ChinaIp.yaml, interval: 21600 }
+    # ChinaIp: { type: http, behavior: ipcidr, path: ./providers/rule/ChinaIp.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/ChinaIp.yaml, interval: 21600 }
     PersonalChinaDomain: { type: http, behavior: classical, path: ./providers/rule/PersonalChinaDomain.yaml, url: https://raw.githubusercontent.com/Zestinc/ClashConfigs/main/PersonalChinaDomain.yaml, interval: 120 }
-
-    Apple: { type: http, behavior: classical, path: ./providers/rule/Apple.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/Ruleset/Apple.yaml, interval: 21600 }
-    Microsoft: { type: http, behavior: classical, path: ./providers/rule/Microsoft.yaml, url: http://154.17.13.205:32580/ACL4SSR/Clash/Providers/Ruleset/Microsoft.yaml, interval: 21600 }
 rules:
     - 'IP-CIDR,192.168.0.0/16,DIRECT,no-resolve'
     - 'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve'
@@ -60,21 +54,12 @@ rules:
     - 'IP-CIDR6,fc00::/7,DIRECT,no-resolve'
     - 'IP-CIDR6,fe80::/10,DIRECT,no-resolve'
     - 'IP-CIDR6,fd00::/8,DIRECT,no-resolve'
-    - 'DOMAIN-SUFFIX,cm.steampowered.com,DIRECT'
-    - 'DOMAIN-SUFFIX,steamserver.net,DIRECT'
-    - 'DOMAIN,portal.36d.uk,DIRECT'
-    - 'DOMAIN,user.36d.biz,DIRECT'
-    - 'DOMAIN,user.36d.dev,DIRECT'
-    
-    - 'RULE-SET,DirectChinaDomain,DIRECT'
-    - 'RULE-SET,Microsoft,Ⓜ Microsoft'
-    - 'RULE-SET,Apple,🍎 Apple'
-
+    - 'RULE-SET,DirectChinaDomain,🇺🇸 United States'
     - 'RULE-SET,USOnlyDomain,🇺🇸 United States'
-    - 'RULE-SET,PersonalChinaDomain,🇨🇳 China'
-
     # 大多数情况可以直接直连
     # - 'RULE-SET,SteamCN,🇨🇳 China'
     # - 'RULE-SET,ChinaDomain,🇨🇳 China'
     # - 'RULE-SET,ChinaIp,🇨🇳 China'
+    - 'RULE-SET,PersonalChinaDomain,🇨🇳 China'
+    - 'MATCH, 🇺🇸 United States'
     
